@@ -26,7 +26,7 @@ public class HelloWorldController {
         database = mongoClient.getDatabase("mydb");
     }
 
-    @RequestMapping("/document")
+    @RequestMapping()
     public ArrayList index() {
         MongoCollection<Document> collection = database.getCollection("mycollection");
         ArrayList<Document> documents = collection.find().into(new ArrayList<Document>());
